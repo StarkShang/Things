@@ -1,0 +1,9 @@
+<div *ngFor="let thing of things">
+  <div *ngFor="let property of thing">
+    {{property.name}}: {{property.value}}
+  </div>
+  <br/>
+</div>
+
+<div>{{dataObject | json}}</div>
+  

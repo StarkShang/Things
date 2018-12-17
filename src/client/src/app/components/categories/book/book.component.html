@@ -1,0 +1,34 @@
+<div>
+  <mat-paginator [length]="books.length"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="pageSizeOptions"
+                 (page)="pageEvent = $event">
+  </mat-paginator>
+  
+  <div *ngIf="pageEvent">
+    <h5>Page Change Event Properties</h5>
+    <div>List length: {{pageEvent.length}}</div>
+    <div>Page size: {{pageEvent.pageSize}}</div>
+    <div>Page index: {{pageEvent.pageIndex}}</div>
+  </div>
+</div>
+
+<mat-list>
+  <mat-list-item *ngFor="let book of books" class="list-item">
+      <img mat-list-avatar [src]="book.coverImageUrl" class="list-item-image"/>
+      <h3 mat-line>
+        <span>{{book.name}}</span>
+        <span>{{book.publisher}}</span>
+      </h3>
+      <p mat-line>
+        <span>{{book.authors | stringArrayConcat}}著</span>
+        <span *ngIf="book.translators !== []">, {{book.translators | stringArrayConcat}}译</span>
+      </p>
+      <p mat-line>
+        <mat-chip-list>
+          <mat-chip *ngFor="let tag of book.tags">{{tag}}</mat-chip>
+        </mat-chip-list>
+      </p>
+  </mat-list-item>
+</mat-list>
+

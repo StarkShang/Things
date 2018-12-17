@@ -1,0 +1,23 @@
+:root {
+    background: red;
+    font-size: 2rem;
+}
+
+#logo-img {
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: 200px auto 30px auto;
+}
+
+#search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+#search-bar > input {
+    margin: 5px;
+}

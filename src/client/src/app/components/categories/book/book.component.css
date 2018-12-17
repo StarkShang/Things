@@ -1,0 +1,13 @@
+.list-item {
+}
+.list-item-image {
+    border-radius: 0 !important;
+}
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
