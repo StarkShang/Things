@@ -11,9 +11,10 @@ import { SigninComponent } from "./components/signin/signin.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { BookComponent } from "./components/categories/book/book.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatSidenavModule, MatIconModule, MatOptionModule, MatSelectModule } from "@angular/material";
 import { MatPaginatorModule, MatInputModule, MatCardModule, MatButtonModule, MatListModule, MatChipsModule, MatFormFieldModule } from "@angular/material";
 import { StringArrayConcatPipe } from "./pipes/StringArrayConcatPipe";
-import { EditTemplateComponent } from './components/edit-template/edit-template.component';
+import { EditTemplateComponent } from "./components/edit-template/edit-template.component";
 
 @NgModule({
   declarations: [
@@ -36,9 +37,13 @@ import { EditTemplateComponent } from './components/edit-template/edit-template.
     MatCardModule,
     MatChipsModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatListModule,
-    MatPaginatorModule
+    MatOptionModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

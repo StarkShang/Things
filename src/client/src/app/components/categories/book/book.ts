@@ -1,7 +1,6 @@
 import { Thing } from "src/app/models/thing";
 
 export class Book extends Thing {
-    public name: string;
     public authors: string[];
     public translators: string[];
     public publisher: string;
@@ -11,6 +10,6 @@ export class Book extends Thing {
 
     constructor() {
         super();
-        this.category = "book";
+        this.tags = ["book"];
     }
 }

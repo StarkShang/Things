@@ -1,5 +1,7 @@
 export class Thing {
-    public category: string;
+    public id: string;
+    public name: string;
+    public tags: string[];
     constructor() {
     }
 }

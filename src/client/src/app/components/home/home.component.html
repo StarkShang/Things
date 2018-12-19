@@ -1,5 +1,13 @@
-<img id="logo-img" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png">
-<div id="search-bar">
-  <input type="text" placeholder="关键词">
-  <button>搜索</button>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav #profile position="end">Start</mat-sidenav>
+  <mat-sidenav-content>
+    <div id="header">
+      <button mat-icon-button>
+        <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+      </button>
+          
+      <button (click)="profile.open()">dakai</button>
+    </div>
+    <div id="body"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

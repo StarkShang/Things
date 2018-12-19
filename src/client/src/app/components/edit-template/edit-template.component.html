@@ -1,3 +1,25 @@
+<h3>{{template.name.cname}}</h3>
 <div>
-  
+    <mat-form-field>
+        <mat-select [(value)]="language">
+            <mat-option *ngFor="let lan of languages" [value]="lan.key">{{lan.value}}</mat-option>
+        </mat-select>
+    </mat-form-field>
 </div>
+
+<div *ngFor="let property of template.properties">
+    <mat-form-field>
+        <input matInput placeholder="字段名" [value]="property.name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="显示名" [value]="property.viewname">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="类型">
+            <mat-option *ngFor="let type of types" [value]="property.type">
+                {{type}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<button mat-raised-button>新增属性</button>
